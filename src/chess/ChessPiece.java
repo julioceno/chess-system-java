@@ -33,9 +33,6 @@ public abstract class ChessPiece extends Piece {
     }
     protected boolean isThereOpponentPiece(Position position) {
         ChessPiece piece = (ChessPiece) getBoard().piece(position);
-        Boolean existsPiece = piece != null;
-        Boolean isOponnent = piece.getColor() != color;
-
-        return existsPiece && isOponnent;
+        return piece != null && piece.getColor() != color;
     }
 }
